@@ -27,11 +27,12 @@ pid = PID(Kp, Ki, Kd, setpoint)
 
 # Update the PID with the current process value and get the control output
 output = pid.update(process_value)
+```
 
-Contributing
+## Contributing
 If you would like to contribute to the PID controller package, please fork the repository and submit a pull request. Before submitting a pull request, please ensure that your changes pass the unit tests and adhere to the PEP 8 style guide.
 
-License
+## License
 The PID controller package is licensed under the MIT License. See the LICENSE file for more information.
 
 
