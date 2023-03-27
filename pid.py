@@ -70,8 +70,9 @@ def ziegler_nichols_tuning(pid, process, step_size=0.1, oscillation_threshold=0.
 def dummy_process(value):
     return value * 2
 
-pid = PID(0.0, 0.0, 0.0, 1.0)
-ziegler_nichols_tuning(pid, dummy_process)
-
-print(f"Tuned PID parameters: Kp={pid.Kp}, Ki={pid.Ki}, Kd={pid.Kd}")
+if __name__ == "__main__":
+    pid = PID(0.0, 0.0, 0.0, 1.0)
+    ziegler_nichols_tuning(pid, dummy_process)
+    
+    print(f"Tuned PID parameters: Kp={pid.Kp}, Ki={pid.Ki}, Kd={pid.Kd}")
 
